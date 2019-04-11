@@ -22,7 +22,8 @@
     <canvas id="Builder" width="100%"></canvas>
     <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script>
     <script>
-      document.getElementById("Builder").offsetHeight = document.getElementById("Builder").offsetWidth;
+      document.getElementById("Builder").offsetWidth = window.innerWidth;
+      document.getElementById("Builder").offsetHeight = window.innerHeight;
       var builder = function(pI_AppName) {
         with (pI_AppName) {
           size(window.innerWidth, window.innerHeight);
