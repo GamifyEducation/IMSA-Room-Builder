@@ -26,6 +26,11 @@
         with (pI_AppName) {
           size(window.innerHeight - 19.2, window.innerHeight - 19.2);
           frameRate(60);
+/* @pjs preload="desk.jpg"; */
+
+PImage desk;
+desk = loadImage("desk.jpg");
+
 var roomDimensions = { width: 175, height: 127 };
 
 var InchesToPixels = function(inches) {
@@ -55,6 +60,13 @@ RoomItem.prototype.Display = function() {
     rectMode(CORNER);
     fill(155);
     rect(0, 0, this.collider.width, this.collider.height);
+    imageMode(CORNER);
+    pushMatrix();
+    rotate(radians(this.angle));
+    img = null;
+    if (this.itemName === "Desk 1" || this.itemName === "Desk 2") { img = desk; }
+    image(desk, 0, 0, this.angle === 0 ? this.collider.width : this.collider.height, this.angle === 0 ? this.collider.height : this.collider.width);
+    popMatrix();
     fill(255);
     textAlign(CENTER, CENTER);
     textSize(min(this.collider.width, this.collider.height) / 5);
