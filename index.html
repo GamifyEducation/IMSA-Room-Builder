@@ -19,14 +19,14 @@
   </head>
   <body>
     <p style="text-align: center;">To use this, drag the furniture around with the mouse. Right click to rotate furniture. Flip the room vertically with the f key.</p>
-    <canvas id="Builder" width="100%"></canvas>
+    <p style="text-align: center;"><canvas id="Builder" width="100%"></canvas></p>
     <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script>
     <script>
-      document.getElementById("Builder").offsetWidth = window.innerWidth;
-      document.getElementById("Builder").offsetHeight = window.innerWidth;
+      document.getElementById("Builder").offsetWidth = window.innerHeight;
+      document.getElementById("Builder").offsetHeight = window.innerHeight;
       var builder = function(pI_AppName) {
         with (pI_AppName) {
-          size(window.innerWidth, window.innerWidth);
+          size(window.innerHeight, window.innerHeight);
           frameRate(60);
 var roomDimensions = { width: 175, height: 127 };
 
