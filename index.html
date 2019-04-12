@@ -56,11 +56,6 @@ RoomItem.prototype.MouseIn = function() {
 RoomItem.prototype.Display = function() {
     pushMatrix();
     translate(this.pos.x, this.pos.y);
-    stroke(0);
-    strokeWeight(0.1);
-    rectMode(CORNER);
-    fill(155);
-    rect(0, 0, this.collider.width, this.collider.height);
     imageMode(CORNER);
     rotate(radians(this.angle));
     img = null;
