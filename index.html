@@ -27,9 +27,10 @@
           size(window.innerHeight - 19.2, window.innerHeight - 19.2);
           frameRate(60);
 /* @pjs preload="desk.jpg"; */
+/* @pjs preload="bed.jpg"; */
 
-var desk;
-desk = loadImage("desk.jpg");
+var desk = loadImage("desk.jpg");
+var bed = loadImage("bed.jpg");
 
 var roomDimensions = { width: 175, height: 127 };
 
@@ -64,6 +65,7 @@ RoomItem.prototype.Display = function() {
     rotate(radians(this.angle));
     img = null;
     if (this.itemName === "Desk 1" || this.itemName === "Desk 2") { img = desk; }
+    if (this.itemName === "Bed 1" || this.itemName === "Bed 2") { img = bed; }
     if (img !== null) {
         image(img, 0, this.angle === 90 ? -this.collider.width : 0, this.angle === 0 ? this.collider.width : this.collider.height, this.angle === 0 ? this.collider.height : this.collider.width);
     }
