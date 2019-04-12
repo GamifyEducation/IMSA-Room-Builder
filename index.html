@@ -61,14 +61,13 @@ RoomItem.prototype.Display = function() {
     fill(155);
     rect(0, 0, this.collider.width, this.collider.height);
     imageMode(CORNER);
-    pushMatrix();
     rotate(radians(this.angle));
     img = null;
     if (this.itemName === "Desk 1" || this.itemName === "Desk 2") { img = desk; }
     if (img !== null) {
         image(img, 0, this.angle === 0 ? 0 : -this.collider.height / 2, this.angle === 0 ? this.collider.width : this.collider.height, this.angle === 0 ? this.collider.height : this.collider.width);
     }
-    popMatrix();
+    rotate(-radians(this.angle));
     fill(255);
     textAlign(CENTER, CENTER);
     textSize(min(this.collider.width, this.collider.height) / 5);
