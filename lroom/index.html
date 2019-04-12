@@ -26,6 +26,12 @@
         with (pI_AppName) {
           size(window.innerHeight - 19.2, window.innerHeight - 19.2);
           frameRate(60);
+/* @pjs preload="desk.jpg,bed.jpg,closet.jpg"; */
+
+var desk = loadImage("desk.jpg");
+var bed = loadImage("bed.jpg");
+var closet = loadImage("closet.jpg");
+
 var roomDimensions = { width1: 112, height1: 136, width2: 145, height2: 88 };
 var InchesToPixels = function(inches) {
     return inches * width / (roomDimensions.width1 + roomDimensions.width2);
