@@ -20,11 +20,11 @@
     <p style="text-align: center;"><canvas id="Builder" width="100%"></canvas></p>
     <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script>
     <script>
-      document.getElementById("Builder").offsetWidth = window.innerHeight;
-      document.getElementById("Builder").offsetHeight = window.innerHeight;
+      document.getElementById("Builder").offsetWidth = window.innerHeight - 19.2;
+      document.getElementById("Builder").offsetHeight = window.innerHeight - 19.2;
       var builder = function(pI_AppName) {
         with (pI_AppName) {
-          size(window.innerHeight, window.innerHeight);
+          size(window.innerHeight - 19.2, window.innerHeight - 19.2);
           frameRate(60);
 var roomDimensions = { width: 175, height: 127 };
 
